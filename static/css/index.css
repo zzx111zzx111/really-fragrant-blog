@@ -1,0 +1,31 @@
+.content_left{
+    display:inline-block;
+    height:600px;
+    width:20%;
+    background-color: red;
+    float:left;
+}
+.content_middle{
+    display:inline-block;
+    height:600px;
+    width:60%;
+    background-color: orange;
+    float:left;
+}
+.content_right{
+    float:right;
+    width:20%;
+    display:inline-block;
+    background-color: orangered;
+    height:600px;
+}
+.bottom{
+    text-align: center;
+}
+.top a{
+    display:inline-block;
+    float:right;
+}
+.top h1{
+    display:inline-block;
+}

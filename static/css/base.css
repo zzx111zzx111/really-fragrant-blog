@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+}
+.top{
+    height:60px;
+    background-color: lightcyan;
+}
+.nav{
+    height:40px;
+    background-color: aquamarine;
+}
+.content{
+    height:600px;
+    background-color: deepskyblue;
+}
+.bottom{
+    height:63px;
+    background-color: darkgray;
+}

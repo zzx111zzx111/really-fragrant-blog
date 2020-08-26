@@ -1,0 +1,54 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    真香代码注册页面
+{% endblock %}
+
+{% block css %}
+    {{ super() }}
+    <link rel="stylesheet" href="/user/static/css/login.css">
+{% endblock %}
+
+{% block top %}
+    {{ super() }}
+{% endblock %}
+
+{% block nav %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="login_box">
+
+        <label>
+            <span>请输入需要注册的用户名:</span>
+            <input type="text" name="account_name" required="required">
+        </label>
+        <label>
+            <span>请输入密码:</span>
+            <input type="password" name="password" required="required">
+        </label><label>
+        <span>请再次输入密码:</span>
+        <input type="password" name="password2" required="required">
+    </label>
+        <p>
+            <input type="submit" value="注册">
+            <a>返回主页面</a>
+            <a>忘记密码</a>
+
+        </p>
+        <a href="{{ url_for('user_bp.to_login') }}" >返回登录页面>>></a>
+
+    </div>
+{% endblock %}
+
+{% block bottom %}
+    {{ super() }}
+{% endblock %}
+
+{% block js %}
+    {{ super() }}
+    <script src="../static/js/reg.js"></script>
+{% endblock %}
+
+

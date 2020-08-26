@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    真香微博
+{% endblock %}
+
+{% block top %}
+    <h1>真香微博</h1>
+{#    登录/注册#}
+{#    <a> <span></span>>>> </a>#}
+    <a href="{{ url_for("user_bp.to_login") }}"></a>
+{% endblock %}
+
+{% block nav %}
+    <a href="/">首页</a>
+    <a href="{{ url_for("blog_bp.to_my_blog") }}">我的微博</a>
+{% endblock %}
+
+{% block content %}
+    <div class="content_left">
+
+
+    </div>
+    <div class="content_middle">
+        <dl>
+            <dt>最新微博热点>>></dt>
+            <dd>11111111111111</dd>
+            <dd>11111111111111</dd>
+            <dd>11111111111111</dd>
+        </dl>
+    </div>
+    <div class="content_right">
+
+    </div>
+{% endblock %}
+{% block bottom %}
+    <small>本网站由本人开发,网站内容由用户共享,如有什么反馈或建议,请点击<a>此反馈入口</a>,或者联系微信zzx111zzx111或发送邮件至761840384@qq.com,感谢您的使用</small>
+{% endblock %}
+{% block css %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/index.css">
+{% endblock %}
+{% block js %}
+    {{ super() }}
+    <script src="/static/js/detect_login_status.js"></script>
+{% endblock %}

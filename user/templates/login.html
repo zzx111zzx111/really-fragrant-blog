@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    真香代码登录页面
+{% endblock %}
+
+{% block css %}
+    {{ super() }}
+    <link rel="stylesheet" href="/user/static/css/login.css">
+{% endblock %}
+
+{% block top %}
+    {{ super() }}
+{% endblock %}
+
+{% block nav %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="login_box">
+
+            <label>
+                <span>请输入用户名:</span>
+                <input type="text" name="account_name">
+            </label>
+            <label>
+                <span>请输入密码:</span>
+                <input type="password" name="password">
+            </label>
+            <p>
+                <input type="submit" value="登录">
+                <a>返回主页面</a>
+                <a>忘记密码</a>
+            </p>
+        <a href="{{ url_for('user_bp.to_reg') }}">还没有注册??去注册>>></a>
+
+    </div>
+{% endblock %}
+
+{% block bottom %}
+    {{ super() }}
+{% endblock %}
+{% block js %}
+{{ super() }}
+    <script src="../static/js/login.js"></script>
+{% endblock %}
+
+

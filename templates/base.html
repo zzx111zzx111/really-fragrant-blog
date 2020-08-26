@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    {% block css %}
+        <link rel="stylesheet" href="/static/css/base.css">
+    {% endblock %}
+    {% block js %}
+        <script src="/static/js/jquery-3.4.1.js"></script>
+    {% endblock %}
+</head>
+<body>
+    <div class="top">
+        {% block top %}
+
+        {% endblock %}
+    </div>
+    <div class="nav">
+        {% block nav %}
+
+        {% endblock %}
+    </div>
+    <div class="content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <div class="bottom">
+        {% block bottom %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>
