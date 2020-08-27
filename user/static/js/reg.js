@@ -3,6 +3,7 @@ $(function () {
         account_name = $('input[name="account_name"]').val()
         password = $('input[name="password"]').val()
         password2 = $('input[name="password2"]').val()
+        // console.log(account_name,password)
         if (account_name === "" || password === "") {
             alert('必填项不能为空')
         } else if (password !== password2) {
@@ -15,7 +16,8 @@ $(function () {
                     'password': password,
                 },
                 function (data) {
-                    alert(data['msg'])
+
+                    console.log(data['msg'])
                     if (data['status'] === '200') {
                         window.location.href = '/user/to_login/'
                     }

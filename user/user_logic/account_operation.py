@@ -1,4 +1,4 @@
-from __init2__ import db
+from __init_db__ import db
 from user.models import Account
 
 

@@ -7,6 +7,6 @@ blog_bp.static_folder='./static'
 @blog_bp.route('/')
 def hello_blog():
     return 'hello blog'
-@blog_bp.route('/to_my_blog')
+@blog_bp.route('/to_my_blog/')
 def to_my_blog():
     return render_template('my_blog.html')

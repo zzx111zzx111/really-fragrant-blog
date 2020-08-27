@@ -22,14 +22,14 @@ def create_manager(app):
 
 def reg_bp(app):
     # 注册蓝图
-    app.register_blueprint(user_bp)
     app.register_blueprint(blog_bp)
+    app.register_blueprint(user_bp)
 
 
 def db_config(app):
     # 连接数据库
     pymysql.install_as_MySQLdb()
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://zzx111:zzx111@localhost:3306/fragrant_code'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://zzx111:zzx111@localhost:3306/fragrant_blog'
     app.config['SQLALCHEMY_TRACK_MODIFICATION'] = True
 
 

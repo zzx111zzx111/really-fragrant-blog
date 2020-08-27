@@ -47,8 +47,10 @@ def exe_reg():
     return data
 @user_bp.route('/exe_login/')
 def exe_login():
+    print('-----------------------------------------已连接服务器')
     account_name=request.args.get('account_name')
     password=request.args.get('password')
+    print(account_name,password)
     #在数据库中查找用户名
     try:
         account=AccountCls(account_name).check_account_name()

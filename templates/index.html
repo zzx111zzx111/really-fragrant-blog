@@ -6,31 +6,21 @@
 
 {% block top %}
     <h1>真香微博</h1>
-{#    登录/注册#}
-{#    <a> <span></span>>>> </a>#}
     <a href="{{ url_for("user_bp.to_login") }}"></a>
 {% endblock %}
 
 {% block nav %}
-    <a href="/">首页</a>
-    <a href="{{ url_for("blog_bp.to_my_blog") }}">我的微博</a>
+    <a href="">首页</a>
+    <a class="to_my_blog">我的微博</a>
+{#    <a href="{{ url_for("blog_bp.to_my_blog") }}">我的微博</a>#}
 {% endblock %}
 
 {% block content %}
-    <div class="content_left">
-
-
-    </div>
     <div class="content_middle">
-        <dl>
-            <dt>最新微博热点>>></dt>
-            <dd>11111111111111</dd>
-            <dd>11111111111111</dd>
-            <dd>11111111111111</dd>
-        </dl>
+11111111111111
     </div>
-    <div class="content_right">
-
+    <div class="content_side">
+111111111111111
     </div>
 {% endblock %}
 {% block bottom %}

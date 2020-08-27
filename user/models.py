@@ -1,4 +1,5 @@
-from __init2__ import db
+from __init_db__ import db
+
 
 class User(db.Model):
     __tablename__ = 'user'
@@ -10,8 +11,11 @@ class User(db.Model):
     mail=db.Column(db.String(64),unique=True,nullable=True)
     address=db.Column(db.String(100),nullable=True)
     head_url=db.Column(db.String(16),nullable=True)
+
 class Account(db.Model):
     __tablename__='account'
     id = db.Column(db.Integer, primary_key=True, unique=True)
     account_name=db.Column(db.String(32),unique=True)
     password = db.Column(db.String(129))
+    # blog = db.relationship('Blog', backref='blog', lazy=True)
+    # blog = db.relationship('Blog', order_by=Blog.id,back_populates="account")

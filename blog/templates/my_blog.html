@@ -8,9 +8,25 @@
     {{ super() }}
 {% endblock %}
 {% block nav %}
-{{ super() }}
+    {{ super() }}
 {% endblock %}
 {% block content %}
+    <div class="content_middle">
+        <form action="">
+            <label for="">
+                <textarea name="sentence" cols="90" rows="8"></textarea>
+            </label>
+            <label for="">
+                <input type="submit" value="发表评论">
+            </label>
+        </form>
+        <ul>
+
+        </ul>
+    </div>
+    <div class="content_side">
+222222222222222222
+    </div>
 
 {% endblock %}
 {% block bottom %}
@@ -18,6 +34,7 @@
 {% endblock %}
 {% block css %}
     {{ super() }}
+    <link rel="stylesheet" href="../static/css/my_blog.css">
 {% endblock %}
 {% block js %}
     {{ super() }}
