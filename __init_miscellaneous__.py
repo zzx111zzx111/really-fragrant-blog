@@ -42,5 +42,7 @@ def create_migrate(manager, app, db):
     # 创建迁移对象
     migrate = Migrate(app, db)
     manager.add_command('db', MigrateCommand)
+
+
 def set_secret_key(app):
-    app.config['SECRET_KEY']='dsjfksdfjkdsjfklsdjf'
+    app.config['SECRET_KEY'] = 'dsjfksdfjkdsjfklsdjf'

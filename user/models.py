@@ -1,4 +1,5 @@
-from __init_db__ import db
+from common.__init_db__ import db
+from blog.models import Blog
 
 
 class User(db.Model):
@@ -18,4 +19,4 @@ class Account(db.Model):
     account_name=db.Column(db.String(32),unique=True)
     password = db.Column(db.String(129))
     # blog = db.relationship('Blog', backref='blog', lazy=True)
-    # blog = db.relationship('Blog', order_by=Blog.id,back_populates="account")
+    blog = db.relationship('Blog', order_by=Blog.publication_date.desc,back_populates="account")

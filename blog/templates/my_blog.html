@@ -12,7 +12,7 @@
 {% endblock %}
 {% block content %}
     <div class="content_middle">
-        <form action="">
+        <form action="{{ url_for("blog_bp.pub_comment") }}" method="post">
             <label for="">
                 <textarea name="sentence" cols="90" rows="8"></textarea>
             </label>
@@ -21,7 +21,16 @@
             </label>
         </form>
         <ul>
-
+            {% for i in blogs %}
+                <li>{{ i.publication_date }}{{ i.sentence }}</li><br>
+                <p class="operation">
+                    <a>点赞</a>
+                    <a>修改</a>
+                    <a>删除</a>
+                    <a>评论</a>
+                </p>
+                <hr>
+            {% endfor %}
         </ul>
     </div>
     <div class="content_side">

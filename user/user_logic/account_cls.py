@@ -1,7 +1,7 @@
-from __init_db__ import db
+from common.__init_db__ import db
 from user.models import Account
 
-
+# 增删改查
 class AccountCls:
     def __init__(self,account_name,password=None):
         self.account_name=account_name

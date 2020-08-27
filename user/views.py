@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, g, redirect, url_for, make_response, session
 
-from user.user_logic.account_operation import AccountCls
+from user.user_logic.account_cls import AccountCls
 from user.user_logic.password_encrypt import sha512_encrypt
 
 user_bp = Blueprint('user_bp', __name__, url_prefix='/user')

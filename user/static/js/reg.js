@@ -17,7 +17,7 @@ $(function () {
                 },
                 function (data) {
 
-                    console.log(data['msg'])
+                    alert(data['msg'])
                     if (data['status'] === '200') {
                         window.location.href = '/user/to_login/'
                     }
