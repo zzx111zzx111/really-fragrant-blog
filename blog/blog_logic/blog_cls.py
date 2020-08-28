@@ -2,17 +2,19 @@ from blog.models import Blog
 
 
 class BlogCls:
-    def __init__(self,sentence,account=None):
-        self.account=account
-        self.sentence=sentence
+    def __init__(self, sentence=None, account=None, blog_id=None):
+        self.account = account
+        self.sentence = sentence
+        self.blog_id = blog_id
+
     def add_blog(self):
-        blog=Blog()
+        blog = Blog()
         blog.sentence = self.sentence
         from datetime import datetime
         blog.publication_date = datetime.now()
-        blog.account_id=self.account.id
+        blog.account_id = self.account.id
         return blog
-    def modify_blog(self):
-        pass
-    def delete_blog(self):
-        pass
+
+    def query_blog_by_id(self):
+        blog = Blog.query.get(self.blog_id)
+        return blog

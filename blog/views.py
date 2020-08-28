@@ -22,7 +22,7 @@ def to_my_blog():
     blogs = account.blog
     print(type(blogs))
 
-    return render_template('my_blog.html',blogs=blogs)
+    return render_template('my_blog.html', blogs=blogs)
 
 
 @blog_bp.route('/pub_comment/', methods=['post', 'get'])
@@ -40,3 +40,15 @@ def pub_comment():
     db.session.add(blog)
     db.session.commit()
     return "添加成功"
+
+
+@blog_bp.route('/del_comment/', methods=['get', 'delete'])
+def del_comment():
+    # 获取前端发送的ID
+    blog_id = request.args.get('blog_id')
+    # 通过ID查找目标
+    blog = BlogCls(blog_id=blog_id).query_blog_by_id()
+    # 执行删除
+    db.session.delete(blog)
+    db.session.commit()
+    return '删除成功'

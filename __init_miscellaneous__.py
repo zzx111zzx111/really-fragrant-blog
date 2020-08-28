@@ -11,6 +11,7 @@ import pymysql
 def create_app():
     # # 创建app
     app = Flask(__name__)
+    app.debug=True
     return app
 
 
